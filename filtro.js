@@ -8,8 +8,8 @@ const productos = [
   {nombre: "Zapato rojo", tipo: "zapato", color: "rojo", img: "./zapato-rojo.jpg"}
 ]
 
-const li = document.getElementsByName("lista-de-productos")
-const $i = document.querySelector('.input');
+const li = document.getElementById("lista-de-productos") //Estaba mal el llamado tenia que ser a un id
+const $i = document.querySelector('input'); //Se quito el punto(.) que tenia ya que el llamado estba mal
 
 for (let i = 0; i < productos.length; i++) {
   var d = document.createElement("div")
@@ -28,10 +28,11 @@ for (let i = 0; i < productos.length; i++) {
   li.appendChild(d)
 }
 
-displayProductos(productos)
-const botonDeFiltro = document.querySelector("button");
+// displayProductos(productos)
+// const botonDeFiltro = document.querySelector("button");
+//Esas 2 lineas se quitaron ya que no tienen un uso
 
-botonDeFiltro.onclick = function() {
+function filtrar() {
   while (li.firstChild) {
     li.removeChild(li.firstChild);
   }
