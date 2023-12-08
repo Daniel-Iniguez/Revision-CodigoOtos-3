@@ -9,7 +9,7 @@ const productos = [
 ]
 
 const li = document.getElementById("lista-de-productos") //Estaba mal el llamado tenia que ser a un id
-const $i = document.querySelector('input'); //Se quito el punto(.) que tenia ya que el llamado estba mal
+const $i = document.querySelector('input'); //Se quito el punto(.) que tenia ya que es un elemento y no una clase
 
 for (let i = 0; i < productos.length; i++) {
   var d = document.createElement("div")
@@ -32,6 +32,7 @@ for (let i = 0; i < productos.length; i++) {
 // const botonDeFiltro = document.querySelector("button");
 //Esas 2 lineas se quitaron ya que no tienen un uso
 
+//Elimine el .onClick y mejor deje la funcion normal para luego llamarla en el html con el atrubito onclcik
 function filtrar() {
   while (li.firstChild) {
     li.removeChild(li.firstChild);
